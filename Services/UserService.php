@@ -13,6 +13,10 @@ class UserService
             echo $user['id'] . '. Имя: ' . $user['name'] . ', Фамилия:' . $user['surname'] . ', E-mail:' . $user['email'] . "\n";
         }
     }
+    public function getUsers()
+    {
+        return $this->repository->getData();
+    }
 
     public function add($name = null, $surname = null, $email = null)
     {

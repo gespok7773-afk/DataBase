@@ -3,6 +3,8 @@ services:
     build: .
     volumes:
       - .:/app
+    ports:
+      - "80:80"
     depends_on:
       - db
     tty: true
